@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { FeedbackWrapper } from './Feedback.styled';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
+import { Statistics } from 'components/Statistics/Statistics';
 
 export const Button = ({ onUpdate, value }) => {
   return <button onClick={onUpdate}>{value}</button>;
@@ -32,15 +33,22 @@ export class Feedback extends Component {
   };
 
   render() {
-    // const { good, neutral, bad } = this.state;
-    // const total = this.countTotalFeedback();
-    // const positive = this.countPositiveFeedbackPercentage();
+    const { good, neutral, bad } = this.state;
+    const total = this.countTotalFeedback();
+    const positive = this.countPositiveFeedbackPercentage();
 
     return (
       <FeedbackWrapper>
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.onLeaveFeedback}
+        />
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={total}
+          positive={positive}
         />
       </FeedbackWrapper>
     );

@@ -8,6 +8,8 @@ const rotate = keyframes`
 
 export const FeedbackWrapper = styled.div`
   display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
   flex-direction: column;
   padding: 20px;
   gap: 8px;
@@ -15,7 +17,6 @@ export const FeedbackWrapper = styled.div`
   z-index: 0;
   width: 400px;
   height: 300px;
-  margin: 20px;
   border-radius: 10px;
   overflow: hidden;
   padding: 2rem;

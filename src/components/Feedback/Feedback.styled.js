@@ -12,11 +12,11 @@ export const FeedbackWrapper = styled.div`
   margin-top: 20px;
   flex-direction: column;
   padding: 20px;
-  gap: 8px;
+  gap: 12px;
   position: relative;
   z-index: 0;
   width: 400px;
-  height: 300px;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
   padding: 2rem;
